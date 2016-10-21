@@ -1,0 +1,16 @@
+<article class='article'>
+  <hgroup class='content-header'>
+    <h2 class='content-title webfont'>
+      <a href='{{ current.url }}'>{{ current.title }}</a>
+    </h2>
+    <h3 class='content-subheader'>
+      <a class='next nav-icon ss-icon' href='{{ current.next.url }}' style='visibility: {% if current.next %}visible{% else %}hidden{% endif %}'>navigateleft</a>
+      <a class='content-date' href='{{ current.url }}'>{{ current.date | date: '%B %d, %Y' }}</a>
+      <a class='previous nav-icon ss-icon' href='{{ current.previous.url }}' style='visibility: {% if current.previous %}visible{% else %}hidden{% endif %}'>navigateright</a>
+    </h3>
+  </hgroup>
+  <div class='content-body'>
+    {{ current.body }}
+  </div>
+  {% include 'includes/article-footer' %}
+</article>
