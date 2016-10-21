@@ -1,7 +1,10 @@
 ---
 title: Tyson Cecka
-timezone: UTC
+timezone: Pacific Time (US & Canada)
 collections:
+  articles:
+    title: Articles
+    output: true
   posts:
     title: Posts
     output: true
